@@ -1,0 +1,76 @@
+This is a brief description of the TUXONE Simple Application.
+A more comprehensive look can be found in the TUXONE System
+Application Development Guide.
+
+The Simple Application consists of a single server offering a single
+service.  The service is called TOUPPER.  The client is run with
+a single argument, which is a string to convert to upper case.
+The client calls the service, which returns the converted string.
+The client then prints that string.
+
+Example: simpcl "Hello World"
+
+Returned string is: HELLO WORLD
+
+This application runs a single server on a single machine.  It is
+designed so that it can be up and running within minutes after
+installing the TUXONE software.
+
+You should probably copy the simpapp files to your own directory,
+since the configuration file must be edited and you might also
+want to experiment with the client and server code.
+
+You need to set and export several environment variables before using
+TUXONE or running any TUXONE application:
+
+	TUXDIR - base directory of the TUXONE software
+	PATH - must include $TUXDIR/bin
+	LD_LIBRARY_PATH - must include $TUXDIR/lib on systems that use
+		shared libraries (except HP-UX and AIX)
+	SHLIB_PATH - HP-UX only: must include $TUXDIR/lib
+	LIBPATH - AIX only: must include $TUXDIR/lib
+	TUXCONFIG - full pathname of binary tuxconfig file
+
+On SUN machines, make sure that /usr/5bin appears at the beginning
+of your PATH.
+
+The sample configuration file, ubbsimple, must be edited to replace
+the bracketed items with values appropriate to your installation.
+Your TUXDIR and TUXCONFIG environment variables must match the
+values in the configuration file.
+
+After editing ubbsimple, create the binary TUXCONFIG file with the command:
+
+	tmloadcf ubbsimple
+	(Answer "y" if it asks you whether it should proceed)
+
+The client and server for the Simple Application are already built: the
+executables are named simpcl and simpserv.  If you have the TUXONE
+Development Environment, you can also build them yourself:
+
+	buildclient -o simpcl -f simpcl.c
+	buildserver -o simpserv -f simpserv.c -s TOUPPER
+
+The Simple Application can be booted with the command:
+
+	tmboot -y
+
+Then you can run "simpcl" as shown in the example above.
+Simpcl can be run as many times as you wish.
+
+When you are done, you can shut down the Simple Application with
+the command:
+
+	tmshutdown -y
+
+Suggested next steps:
+
+	Run more than one copy of the "simpserv" server, all operating
+	from a single queue (Hint: See the RQADDR parameter in ubbconfig(5)).
+
+	Configure a networked application, where the client and server
+	run on different machines.
+
+	Try the administrative command, "tmadmin", to display and
+	modify the parameters of the running application.  (Try
+	suspending the TOUPPER service, and then running the client.)

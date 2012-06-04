@@ -1,0 +1,45 @@
+#
+# config for txgate
+#
+tuxone.gate.listener.addr                   = 0.0.0.0:26000
+tuxone.gate.other.addr                      = NONE
+tuxone.gate.sync.interval                   = 12
+tuxone.gate.concurrent.max                  = 512
+tuxone.gate.concurrent.lowWater             = 128
+tuxone.gate.concurrent.highWater            = 2048
+tuxone.gate.housekeeping.interval           = 10
+tuxone.gate.bbl.berthMax                    = 128
+tuxone.gate.wsh.min                         = 1
+tuxone.gate.wsh.max                         = 32
+tuxone.gate.wsh.accessMax                   = 512
+tuxone.gate.wsh.threadPool.threadMin        = 3
+tuxone.gate.wsh.threadPool.threadMax        = 128
+tuxone.gate.wsh.threadPool.threadMaxIdle    = 10
+tuxone.gate.wsh.serverValidTime             = 30
+tuxone.gate.wsh.housekeeping.interval       = 10
+tuxone.gate.wsh.app.heart.interval          = 12
+tuxone.gate.log.enable                      = true
+tuxone.gate.log.level                       = 4
+tuxone.gate.log.printFile                   = true
+tuxone.gate.log.printConsole                = false
+
+
+#
+# config for app
+#
+tuxone.app.gate.addr                        = 127.0.0.1:26000
+tuxone.app.server.listener.addr             = 0.0.0.0:0
+tuxone.app.server.concurrentMax             = 512
+tuxone.app.server.maxLongConnections        = 256
+tuxone.app.server.threadMode                = MT
+tuxone.app.server.threadPool.threadMin      = 3
+tuxone.app.server.threadPool.threadMax      = 128
+tuxone.app.server.threadPool.threadMaxIdle  = 10
+tuxone.app.client.cachedConnections         = 128
+tuxone.app.heart.interval                   = 3
+tuxone.app.buffer.cachedSize                = 1024000
+tuxone.app.socket.rwtimeout                 = 90
+tuxone.app.log.enable                       = true
+tuxone.app.log.level                        = 4
+tuxone.app.log.printFile                    = true
+tuxone.app.log.printConsole                 = false

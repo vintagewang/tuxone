@@ -1,0 +1,53 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/simpapp/ubbsimple	$Revision: 51 $"
+
+#Skeleton UBBCONFIG file for the TUXEDO Simple Application.
+#Replace the <bracketed> items with the appropriate values.
+
+*RESOURCES
+IPCKEY		<Replace with a valid IPC Key>
+
+#Example:
+#IPCKEY		123456
+
+DOMAINID	simpapp
+MASTER		simple
+MAXACCESSERS	10
+MAXSERVERS	5
+MAXSERVICES	10
+MODEL		SHM
+LDBAL		N
+
+*MACHINES
+DEFAULT:
+#Example:
+#		APPDIR="/home/me/simpapp"
+#		TUXCONFIG="/home/me/simpapp/tuxconfig"
+#		TUXDIR="/usr/tuxedo"
+
+
+#Example:
+#beatux		LMID=simple
+
+*GROUPS
+GROUP1
+	LMID=simple	GRPNO=1	OPENINFO=NONE
+GROUP2
+	LMID=simple	GRPNO=2	OPENINFO=NONE
+
+*SERVERS
+DEFAULT:
+		CLOPT="-A"
+
+stockxml	SRVGRP=GROUP1 SRVID=1
+stockxml_c	SRVGRP=GROUP2 SRVID=1
+
+*SERVICES
+STOCKQUOTE	ROUTING=symbol
+
+*ROUTING
+symbol		FIELD="stockquotes/stock_quote/symbol"
+		BUFTYPE="XML"
+		FIELDTYPE=STRING
+		RANGES="'BEAS'-'BEAS':GROUP1,
+			'MSFT'-'MSFT':GROUP2"

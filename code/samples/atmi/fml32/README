@@ -1,0 +1,28 @@
+# $Id: README 183 2011-03-19 16:04:08Z vintage $
+You need to set and export several environment variables before using
+TUXONE or running any TUXONE application:
+
+The sample script file int tuxone dir, tux.env, must be edited to replace
+the bracketed items with values appropriate to your installation.
+
+After editing tux.env, running the command:
+	. ./tux.env
+
+If you have the TUXONE Development Environment, you can build them yourself:
+
+	mkfldhdr32 friend.fml
+	buildclient -o client -f client.c
+	buildserver -o server -f server.c -s ADD_FRIEND
+
+The Simple Application can be booted with the command:
+
+	./txgate
+	./server
+	./client
+
+Then you can run "fml32" as shown in the example above.
+
+When you are done, you can shut down the TUXONE System Application with
+the command:
+
+	tmshutdown -y

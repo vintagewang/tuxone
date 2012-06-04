@@ -1,0 +1,29 @@
+# $Id: README 182 2011-03-19 15:52:35Z vintage $
+You need to set and export several environment variables before using
+TUXONE or running any TUXONE application:
+
+The sample script file int tuxone dir, tux.env, must be edited to replace
+the bracketed items with values appropriate to your installation.
+
+After editing tux.env, running the command:
+	. ./tux.env
+	. ./setenv.sh
+
+If you have the TUXONE Development Environment, you can build them yourself:
+
+	viewc32 -n student.v
+	buildclient -o client -f client.c
+	buildserver -o server -f server.c -s ADD_STUDENT
+
+The Simple Application can be booted with the command:
+
+	./txgate
+	./server
+	./client
+
+Then you can run "view32" as shown in the example above.
+
+When you are done, you can shut down the TUXONE System Application with
+the command:
+
+	tmshutdown -y

@@ -1,0 +1,67 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1991 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/simpapp/README	$Revision: 51 $"
+
+This is a brief description of the TUXEDO stockapp Application.
+A more comprehensive look can be found in the TUXEDO System
+Application Development Guide.
+
+The stockapp Application consists of 2 servers offering the same 
+STOCKQUOTE service. The client is run with
+a single argument, which is an xml file. 
+The client calls the service, which returns the stock price.
+The client then prints the xml buffer.
+
+Example: Client stock_quote_beas.xml 
+
+Returns: xml buffer with the stock price for BEAS or MSFT. 
+
+This application runs 2 servers on a single machine. This example also 
+illustrates ROUTING of XML buffers - that's why the need for two servers.
+One of the servers is a Tuxedo server written in C++ and the other one is
+written in C. The Tuxedo serve written in C requires a wrapper dll to call 
+the C++ methods in the xerces parser.
+
+
+You should probably copy the stockapp files to your own directory,
+since the configuration file must be edited and you might also
+want to experiment with the client and server code.
+
+You need to set and export several environment variables before using
+TUXEDO or running any TUXEDO application:
+
+	TUXDIR - base directory of the TUXEDO software
+	PATH - must include %TUXDIR%/bin
+	TUXCONFIG - full pathname of binary tuxconfig file
+
+
+The sample configuration file, ubbsimple, must be edited to replace
+the bracketed items with values appropriate to your installation.
+Your TUXDIR and TUXCONFIG environment variables must match the
+values in the configuration file.
+
+After editing ubbsimple, create the binary TUXCONFIG file with the command:
+
+	tmloadcf ubbsimple
+	(Answer "y" if it asks you whether it should proceed)
+
+To build the client and the servers,
+        export CFLAGS=-I.
+
+	buildclient -o Client -f Client.cpp -f SAXPrint.cpp -f SAXPrintHandlers.cpp -f %TUXDIR%\lib\libtxml.lib
+
+	buildserver -o stockxml -f stockxml.cpp -f DOMTreeErrorReporter.cpp -s STOCKQUOTE -f %TUXDIR%\lib\libtxml.lib
+
+        buildserver -v -s STOCKQUOTE -f stockxml_c.c -o stockxml_c -f xmlWrapper.cpp -f DOMTreeErrorReporter.cpp -f %TUXDIR%\lib\libtxml.lib
+
+The stockapp Application can be booted with the command:
+
+	tmboot -y
+
+Then you can run the client as shown in the example above.
+
+When you are done, you can shut down the Simple Application with
+the command:
+
+	tmshutdown -y

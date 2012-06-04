@@ -1,0 +1,9 @@
+FRIEND_NAME	200	string	-	-
+FRIEND_SEX	201	char	-	-
+FRIEND_AGE	202	long	-	-
+FRIEND_ADDR	203	string	-	-
+FRIEND_CHILDREN	204	short	-	-
+FRIEND_WEIGHT	205	float	-	-
+FRIEND_HEIGHT	206	double	-	-
+FRIEND_PHOTO	207	carray	-	-
+FRIEND_ADDTIME	208	long	-	-

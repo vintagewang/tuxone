@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- "Stock Quotes". -->
+
+<stockquotes>
+
+  <stock_quote>
+   <symbol>MSFT</symbol>
+   <when>
+     <date>01/27/2001</date>
+     <time>3:40PM</time>
+   </when>
+   <change>+5.25</change>
+   <volume>64282200</volume>
+  </stock_quote>
+
+</stockquotes>
+
