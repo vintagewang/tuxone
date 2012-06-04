@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lwpr", "lwpr.vcproj", "{21DEF436-4BBC-4ABE-8910-B634593FF08F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genconfig", "genconfig.vcproj", "{26B76070-A908-485F-9AEB-9DB5C1ABB08A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21DEF436-4BBC-4ABE-8910-B634593FF08F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21DEF436-4BBC-4ABE-8910-B634593FF08F}.Debug|Win32.Build.0 = Debug|Win32
+		{21DEF436-4BBC-4ABE-8910-B634593FF08F}.Release|Win32.ActiveCfg = Release|Win32
+		{21DEF436-4BBC-4ABE-8910-B634593FF08F}.Release|Win32.Build.0 = Release|Win32
+		{26B76070-A908-485F-9AEB-9DB5C1ABB08A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{26B76070-A908-485F-9AEB-9DB5C1ABB08A}.Debug|Win32.Build.0 = Debug|Win32
+		{26B76070-A908-485F-9AEB-9DB5C1ABB08A}.Release|Win32.ActiveCfg = Release|Win32
+		{26B76070-A908-485F-9AEB-9DB5C1ABB08A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
