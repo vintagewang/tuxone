@@ -106,21 +106,11 @@ int main(int argc, char *argv[])
 	strCMPCMD += strCFLAGS;
 	strCMPCMD += " ";
 
-	strCMPCMD += "-I$TUXDIR/include ";
+	strCMPCMD += "-I${TUXDIR}/include ";
 
 	strCMPCMD += "-o ";
 	strCMPCMD += BuildserverCmdline::GetInstance()->GetOutfile();
 	strCMPCMD += " ";
-
-	strCMPCMD += "-L${TUXDIR}/lib ";
-
-	std::string strFirstFiles;
-
-	if(BuildserverCmdline::GetInstance()->GetFirstFiles(strFirstFiles))
-	{
-		strCMPCMD += strFirstFiles;
-		strCMPCMD += " ";
-	}
 
 	std::string mainStubFile;
 	try
@@ -130,10 +120,25 @@ int main(int argc, char *argv[])
 			strCMPCMD += mainStubFile;
 			strCMPCMD += " ";
 		}
+		else
+		{
+			printf("generate server stub file error\n");
+			return -1;
+		}
 	}
 	catch(...)
 	{
 		return -1;
+	}
+
+	strCMPCMD += "-L${TUXDIR}/lib ";
+
+	std::string strFirstFiles;
+
+	if(BuildserverCmdline::GetInstance()->GetFirstFiles(strFirstFiles))
+	{
+		strCMPCMD += strFirstFiles;
+		strCMPCMD += " ";
 	}
 
 	strCMPCMD += "-ltux -llwpr ";

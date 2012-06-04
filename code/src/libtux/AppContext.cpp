@@ -290,6 +290,8 @@ int AppContext::tpcall(char *svc, char *idata, long ilen, char **odata, long *ol
 					{
 						*(*odata + response.vRepBuf->Size()) = 0;
 					}
+
+					*olen = response.vRepBuf->Size();
 				}
 				else
 				{

@@ -3,7 +3,7 @@ export PS1='[$LOGNAME]redhat-x64:$PWD>'
 export PATH=.:$PATH:/sbin
 
 # knish
-export KNISH_HOME=$HOME/htc/knish
+export KNISH_HOME=$HOME/wolf/github/tuxone
 export PATH=$KNISH_HOME/code/bin:$KNISH_HOME/code/ext/lwpr/bin:$KNISH_HOME/sbin:$PATH
 export LD_LIBRARY_PATH=$KNISH_HOME/code/lib:$KNISH_HOME/code/ext/lwpr/lib:$LD_LIBRARY_PATH
 . $KNISH_HOME/code/tux.env

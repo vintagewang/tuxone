@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# if [ $# -ne 1 ]
-# then
-#     echo "Useage: $0 Revision"
-#     exit -1
-# fi
-
 CWD_DIR=`pwd`
 TMP_DIR=`date +%Y%m%d_%H%M%S`
 
@@ -15,9 +9,9 @@ XML_DIR=${XERCES_HOME}/${LWPR_ENV_ARCH}
 
 if [ ${LWPR_ENV_ARCH} = "32" ]
 then
-    TAR_NAME=tuxone${LWPR_ENV_VERSION}.linux.x86.beta
+    TAR_NAME=tuxone-${LWPR_ENV_VERSION}-linux-x86
 else
-    TAR_NAME=tuxone${LWPR_ENV_VERSION}.linux.x64.beta
+    TAR_NAME=tuxone-${LWPR_ENV_VERSION}-linux-x64
 fi
 
 mkdir ${TAG_DIR}
