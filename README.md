@@ -12,3 +12,9 @@ https://github.com/downloads/vintage-wang/tuxone/tuxone-developing-guide-2.1.0-c
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright By Wangxr, vintage.wang@gmail.com
+
+## Contact & Support
+* [Post Issue Online](https://github.com/vintage-wang/tuxone/issues/new)
+* vintage.wang@gmail.com
+* QQ GROUP: 5777021
+
