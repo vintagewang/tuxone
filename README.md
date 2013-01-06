@@ -16,6 +16,6 @@ Copyright By Wangxr, vintage.wang@gmail.com
 ## Contact & Support
 * [Post Issue Online](https://github.com/vintage-wang/tuxone/issues/new)
 * vintage.wang@gmail.com
-* QQ GROUP: 5777021 3734746
+* QQ GROUP: 3734746  5777021 
 * [weibo](http://weibo.com/vintagewangxr)
 
