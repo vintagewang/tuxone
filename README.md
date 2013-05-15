@@ -6,7 +6,7 @@ If you are familiar with oracle tuxedo, also be able to control tuxone.
 ## How to start?
 
 Before you start it, you must read the document below.
-https://github.com/downloads/vintage-wang/tuxone/tuxone-developing-guide-2.1.0-cn.pdf
+https://github.com/vintagewang/tuxone/blob/master/docs/tuxone_developing_guide/tuxone_developing_guide.pdf
 
 ## License
 
