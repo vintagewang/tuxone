@@ -1,83 +1,31 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lwpr", "..\ext\lwpr\project\lwpr.vcproj", "{21DEF436-4BBC-4ABE-8910-B634593FF08F}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lwpr", "..\ext\lwpr\project\lwpr.vcxproj", "{21DEF436-4BBC-4ABE-8910-B634593FF08F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "txgate", "txgate.vcproj", "{2D49E947-7872-40A4-91F8-E03BEB07359E}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "txgate", "txgate.vcxproj", "{2D49E947-7872-40A4-91F8-E03BEB07359E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tmadmin", "tmadmin.vcproj", "{2F0C8ACE-52A1-4B3C-873E-1F9D709A0676}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tmadmin", "tmadmin.vcxproj", "{2F0C8ACE-52A1-4B3C-873E-1F9D709A0676}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtux", "libtux.vcproj", "{F45511C3-2C51-4DB6-9DBF-0B926F659F6F}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtux", "libtux.vcxproj", "{F45511C3-2C51-4DB6-9DBF-0B926F659F6F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildclient", "buildclient.vcproj", "{B4CFC4A7-EF8F-47AF-9F76-8B56D27579F7}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildclient", "buildclient.vcxproj", "{B4CFC4A7-EF8F-47AF-9F76-8B56D27579F7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildserver", "buildserver.vcproj", "{25240E08-90F9-4F8E-A679-C20A01A7ACEA}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buildserver", "buildserver.vcxproj", "{25240E08-90F9-4F8E-A679-C20A01A7ACEA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genconfig", "..\ext\lwpr\project\genconfig.vcproj", "{26B76070-A908-485F-9AEB-9DB5C1ABB08A}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genconfig", "..\ext\lwpr\project\genconfig.vcxproj", "{26B76070-A908-485F-9AEB-9DB5C1ABB08A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tmshutdown", "tmshutdown.vcproj", "{7CDDE9FE-F9B2-4FDC-B4A3-8AB164E9423D}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tmshutdown", "tmshutdown.vcxproj", "{7CDDE9FE-F9B2-4FDC-B4A3-8AB164E9423D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viewc32", "viewc32.vcproj", "{B4CFC4A7-EF8F-47AF-9F76-8B56D27579F8}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viewc32", "viewc32.vcxproj", "{B4CFC4A7-EF8F-47AF-9F76-8B56D27579F8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtmb", "libtmb.vcproj", "{AAF0EC1F-40D8-4A3F-9392-EB3078546093}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtmb", "libtmb.vcxproj", "{AAF0EC1F-40D8-4A3F-9392-EB3078546093}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viewdis32", "viewdis32.vcproj", "{A4EE0BDC-6DF8-4169-94D7-AA288A33B46E}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viewdis32", "viewdis32.vcxproj", "{A4EE0BDC-6DF8-4169-94D7-AA288A33B46E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mkfldhdr32", "mkfldhdr32.vcproj", "{645027D4-C171-49F1-9E27-55F96571775C}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mkfldhdr32", "mkfldhdr32.vcxproj", "{645027D4-C171-49F1-9E27-55F96571775C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmon", "..\ext\lwpr\project\pmon.vcproj", "{ECA85E49-C63A-4C0F-A2E4-34DCF613DBB2}"
-	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.Debug = "False"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmon", "..\ext\lwpr\project\pmon.vcxproj", "{ECA85E49-C63A-4C0F-A2E4-34DCF613DBB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
