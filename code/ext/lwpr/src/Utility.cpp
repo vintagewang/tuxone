@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include <sys/time.h>
 #include <arpa/inet.h>
+#include <limits.h>
 
 namespace LWPR
 {

@@ -24,6 +24,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <algorithm>
+#include <string.h>
 
 using namespace std;
 

@@ -17,6 +17,7 @@
 #define TUX_APP_DEPOT_H__
 #include <lwpr.h>
 #include <map>
+#include <string.h>
 #include "Message.h"
 
 typedef struct app_item_t

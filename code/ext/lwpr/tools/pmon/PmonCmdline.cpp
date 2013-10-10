@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 #include "PmonCmdline.h"
-
+#include <stdlib.h>
 
 PmonCmdline::PmonCmdline()
 {

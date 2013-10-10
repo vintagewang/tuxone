@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 #include "STNetServer.h"
+#include <stdio.h>
+#include <string.h>
 
 namespace LWPR
 {

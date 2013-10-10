@@ -19,6 +19,8 @@
 #include <iostream>
 #include <string>
 #include "BulletinBoard.h"
+#include <stdlib.h>
+#include <string.h>
 
 using std::cout;
 using std::cerr;

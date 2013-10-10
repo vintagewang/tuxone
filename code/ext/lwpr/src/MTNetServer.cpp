@@ -16,6 +16,8 @@
 #include "MTNetServer.h"
 #include "Synchronized.h"
 #include <assert.h>
+#include <stdio.h>
+#include <string.h>
 
 namespace LWPR
 {

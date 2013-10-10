@@ -21,7 +21,8 @@
 #include "View32Manager.h"
 #include "FML32API.h"
 #include <setjmp.h>
-
+#include <stdlib.h>
+#include <string.h>
 
 AppNSHandlerImpl::AppNSHandlerImpl()
 	: m_argv(NULL), m_argc(0)

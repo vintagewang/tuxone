@@ -15,7 +15,6 @@
  */
 #include "AppDepot.h"
 
-
 AppDepot::AppDepot()
 {
 }

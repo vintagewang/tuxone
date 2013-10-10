@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 #include "View32Manager.h"
-
+#include <stdlib.h>
+#include <string.h>
 
 View32Manager::View32Manager()
 {

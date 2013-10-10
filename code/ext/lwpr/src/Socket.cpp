@@ -29,6 +29,8 @@
 #include <sys/select.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 namespace LWPR
 {

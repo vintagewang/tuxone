@@ -15,6 +15,7 @@
  */
 #include "StringUtil.h"
 #include <cstring>
+#include <algorithm>
 
 namespace LWPR
 {

@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <lwpr.h>
+#include <string.h>
 #include "GateConfig.h"
 #include "BulletinBoard.h"
 #include "ShareCookie.h"

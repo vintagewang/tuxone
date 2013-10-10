@@ -2,6 +2,7 @@
  * $Id: genconfig.cpp 126 2011-03-17 13:05:38Z vintage $
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 #include <string.h>
 #include <assert.h>

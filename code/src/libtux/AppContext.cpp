@@ -24,6 +24,7 @@
 #include "View32Manager.h"
 #include "FML32API.h"
 #include <stdlib.h>
+#include <string.h>
 #include <lwpr.h>
 
 AppContext::AppContext():

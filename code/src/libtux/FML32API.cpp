@@ -16,6 +16,7 @@
 #include <fml32.h>
 #include <limits.h>
 #include <stdlib.h>
+#include <string.h>
 #include <lwpr.h>
 #include <arpa/inet.h>
 #include "TLSLibtux.h"

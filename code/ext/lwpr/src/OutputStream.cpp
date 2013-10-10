@@ -15,6 +15,8 @@
  */
 #include "OutputStream.h"
 #include <arpa/inet.h>
+#include <string.h>
+
 
 namespace LWPR
 {

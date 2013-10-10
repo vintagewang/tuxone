@@ -15,6 +15,8 @@
  */
 #include "Fml32Util.h"
 #include <lwpr.h>
+#include <stdlib.h>
+#include <string.h>
 
 LWPR::UINT32 fml32_item_format_t::GetFieldID()
 {

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 #include "Message.h"
+#include <string.h>
 
 TUX_INVOKE_RESULT_E Invoke(LWPR::SOCKET_FD_T fd, Message& msg_in, Message& msg_out, LWPR::INT32 timeout)
 {

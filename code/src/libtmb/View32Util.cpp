@@ -17,6 +17,8 @@
 #include "viewobj.h"
 #include <atmi.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 //----------------------------------------------------------------
 // struct STRUCT_ITEM_FORMAT_T
