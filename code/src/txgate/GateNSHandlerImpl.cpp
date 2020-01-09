@@ -66,51 +66,51 @@ Message* GateNSHandlerImpl::InvokeImpl(LWPR::SOCKET_FD_T fd, const TUX_HEADER_ME
 	{
 		switch(req_header.nMsgType)
 		{
-			// ¹ÜÀí¹¤¾ßÀà£º»ñÈ¡¹«¸æ°åÊı¾İÁ÷
+			// ç®¡ç†å·¥å…·ç±»ï¼šè·å–å…¬å‘Šæ¿æ•°æ®æµ
 		case TUX_MSG_TYPE_ADMIN_GET_BB_REQ:
 			{
-				// ½âÎöÇëÇó±¨ÎÄ
+				// è§£æè¯·æ±‚æŠ¥æ–‡
 				TUX_FETCH_BB_REQ_T msgReq;
 				msgReq.Unmarshal(req_body);
 				msgReq.MsgHeader(req_header);
 
-				// ´´½¨Ó¦´ğ±¨ÎÄ
+				// åˆ›å»ºåº”ç­”æŠ¥æ–‡
 				TUX_FETCH_BB_REP_T* pMsgRepCurrent = new TUX_FETCH_BB_REP_T();
 				pMsgRep = pMsgRepCurrent;
 
-				// ÒµÎñÂß¼­ÊµÏÖ
+				// ä¸šåŠ¡é€»è¾‘å®ç°
 				FetchBB(fd, msgReq, *pMsgRepCurrent);
 			}
 			break;
-			// APPÓëGateÍ¨ĞÅ£º×¢²áAPP¡¢·¢²¼SERVICE
+			// APPä¸Gateé€šä¿¡ï¼šæ³¨å†ŒAPPã€å‘å¸ƒSERVICE
 		case TUX_MSG_TYPE_APP_REGISTER_REQ:
 			{
-				// ½âÎöÇëÇó±¨ÎÄ
+				// è§£æè¯·æ±‚æŠ¥æ–‡
 				TUX_APP_REGISTER_REQ_T msgReq;
 				msgReq.Unmarshal(req_body);
 				msgReq.MsgHeader(req_header);
 
-				// ´´½¨Ó¦´ğ±¨ÎÄ
+				// åˆ›å»ºåº”ç­”æŠ¥æ–‡
 				TUX_APP_REGISTER_REP_T* pMsgRepCurrent = new TUX_APP_REGISTER_REP_T();
 				pMsgRep = pMsgRepCurrent;
 
-				// ÒµÎñÂß¼­ÊµÏÖ
+				// ä¸šåŠ¡é€»è¾‘å®ç°
 				RegisterApp(fd, msgReq, *pMsgRepCurrent);
 			}
 			break;
-			// APPÓëGateÍ¨ĞÅ£ºClientÏòGate¶©ÔÄ·şÎñ
+			// APPä¸Gateé€šä¿¡ï¼šClientå‘Gateè®¢é˜…æœåŠ¡
 		case TUX_MSG_TYPE_APP_SUBSCIBE_REQ:
 			{
-				// ½âÎöÇëÇó±¨ÎÄ
+				// è§£æè¯·æ±‚æŠ¥æ–‡
 				TUX_APP_SUBSCIBE_REQ_T msgReq;
 				msgReq.Unmarshal(req_body);
 				msgReq.MsgHeader(req_header);
 
-				// ´´½¨Ó¦´ğ±¨ÎÄ
+				// åˆ›å»ºåº”ç­”æŠ¥æ–‡
 				TUX_APP_SUBSCIBE_REP_T* pMsgRepCurrent = new TUX_APP_SUBSCIBE_REP_T();
 				pMsgRep = pMsgRepCurrent;
 
-				// ÒµÎñÂß¼­ÊµÏÖ
+				// ä¸šåŠ¡é€»è¾‘å®ç°
 				SubscibeService(fd, msgReq, *pMsgRepCurrent);
 			}
 			break;
@@ -138,14 +138,14 @@ void GateNSHandlerImpl::FetchBB(LWPR::SOCKET_FD_T fd, TUX_FETCH_BB_REQ_T& reques
 {
 	DEBUG_FUNCTION();
 
-	// »ñÈ¡¹«¸æ°åÊı¾İ
+	// è·å–å…¬å‘Šæ¿æ•°æ®
 	BB_STREAM_T bb;
 	BulletinBoard::GetInstance()->GetBBStream(bb, request.bFetchAll);
 
 	LWPR::OutputStream out;
 	bb.Marshal(out);
 
-	// ÉèÖÃÓ¦´ğ±¨ÎÄ
+	// è®¾ç½®åº”ç­”æŠ¥æ–‡
 	response.vBufBody = out.GetBuffer();
 	response.MsgHeader().nMsgRetCode = TUX_MSG_RET_CODE_OK;
 }
@@ -156,7 +156,7 @@ void GateNSHandlerImpl::RegisterApp(LWPR::SOCKET_FD_T fd, TUX_APP_REGISTER_REQ_T
 
 	bool bRegisterOK = false;
 
-	// ×¢²áService£¨TODO: ´Ë´¦´æÔÚĞÔÄÜÎÊÌâ£¬ºóĞøÓÅ»¯£©
+	// æ³¨å†ŒServiceï¼ˆTODO: æ­¤å¤„å­˜åœ¨æ€§èƒ½é—®é¢˜ï¼Œåç»­ä¼˜åŒ–ï¼‰
 	if((request.nAppType & TUX_APP_TYPE_SERVER) == TUX_APP_TYPE_SERVER)
 	{
 		for(size_t i = 0; i < request.vtServices.size(); i++)
@@ -182,17 +182,17 @@ void GateNSHandlerImpl::RegisterApp(LWPR::SOCKET_FD_T fd, TUX_APP_REGISTER_REQ_T
 		}
 	}
 
-	// ×¢²áµ½±¾µØ
+	// æ³¨å†Œåˆ°æœ¬åœ°
 	APP_ITEM_T item;
 	item.nAppType = request.nAppType;
 	item.nLastUpdateTime = time(NULL);
 	item.tSocketAddr = request.tServerAddr;
 	AppDepot::GetInstance()->RegisterApp(fd, item);
 
-	// Í¨ÖªÏß³Ì
+	// é€šçŸ¥çº¿ç¨‹
 	if(bRegisterOK) HousekeepingThread::GetInstance()->Wakeup(true);
 
-	// ÉèÖÃÓ¦´ğ±¨ÎÄ
+	// è®¾ç½®åº”ç­”æŠ¥æ–‡
 	response.nBBUpdateSeq = BulletinBoard::GetInstance()->GetSVCUpdateSeq();
 	response.nAppHeartInterval = GateConfig::GetInstance()->TUXONE_GATE_WSH_APP_HEART_INTERVAL();
 	response.MsgHeader().nMsgRetCode = TUX_MSG_RET_CODE_OK;
@@ -202,11 +202,11 @@ void GateNSHandlerImpl::SubscibeService(LWPR::SOCKET_FD_T fd, TUX_APP_SUBSCIBE_R
 {
 	DEBUG_FUNCTION();
 
-	// ÉèÖÃÓ¦´ğ±¨ÎÄ
+	// è®¾ç½®åº”ç­”æŠ¥æ–‡
 	BBSVCList bbsvcs;
 	response.nBBUpdateSeq = BulletinBoard::GetInstance()->GetAllSVC(request.vtServices, bbsvcs);
 
-	// ×ª»¯±¨ÎÄ
+	// è½¬åŒ–æŠ¥æ–‡
 	for(size_t i = 0; i < bbsvcs.size(); i++)
 	{
 		SERVICE_INFO_T info;
@@ -217,3 +217,5 @@ void GateNSHandlerImpl::SubscibeService(LWPR::SOCKET_FD_T fd, TUX_APP_SUBSCIBE_R
 
 	response.MsgHeader().nMsgRetCode = TUX_MSG_RET_CODE_OK;
 }
+
+// test for source owners feature
