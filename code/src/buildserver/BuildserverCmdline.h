@@ -27,55 +27,55 @@ public:
 
 	/**
 	 * [-C]
-	 * ÊÇ·ñÊÇ±àÒëCOBOL³ÌĞò
+	 * æ˜¯å¦æ˜¯ç¼–è¯‘COBOLç¨‹åº
 	 */
 	bool IsCOBOLCompilation();
 
 	/**
 	 * [-s services[:func[()]]]
-	 * »ñÈ¡·şÎñÃû
+	 * è·å–æœåŠ¡å
 	 */
 	bool GetServiceNames(std::vector<std::string>& services);
 
 	/**
 	 * [-k]
-	 * ÊÇ·ñ±£ÁôÉú³ÉµÄ´øÓĞmainº¯ÊıµÄÔ´ÎÄ¼ş
+	 * æ˜¯å¦ä¿ç•™ç”Ÿæˆçš„å¸¦æœ‰mainå‡½æ•°çš„æºæ–‡ä»¶
 	 */
 	bool IsKeepMainStubFile();
 
 	/**
 	 * [-t]
-	 * ÊÇ·ñÖ§³Ö¶àÏß³Ì
+	 * æ˜¯å¦æ”¯æŒå¤šçº¿ç¨‹
 	 */
 	bool IsMultithreading();
 
 	/**
 	 * [-v]
-	 * ÊÇ·ñ±àÒë¹ı³Ì´òÓ¡¸ü¶àµÄĞÅÏ¢
+	 * æ˜¯å¦ç¼–è¯‘è¿‡ç¨‹æ‰“å°æ›´å¤šçš„ä¿¡æ¯
 	 */
 	bool IsVerboseMode();
 
 	/**
 	 * [-r rmname]
-	 * »ñÈ¡rmname
+	 * è·å–rmname
 	 */
 	bool GetRMNAME(std::string& rmname);
 
 	/**
 	 * [-o outfile]
-	 * »ñÈ¡Ä¿±êÎÄ¼şÃû£¨Ä¬ÈÏÖµ£ºa.out£©
+	 * è·å–ç›®æ ‡æ–‡ä»¶åï¼ˆé»˜è®¤å€¼ï¼ša.outï¼‰
 	 */
 	std::string GetOutfile();
 
 	/**
 	 * [-f firstfiles]
-	 * »ñÈ¡ÓÅÏÈÓÚTUXEDOÏµÍ³¿âÖ®Ç°Á¬½ÓµÄÎÄ¼şÃûÁĞ±í
+	 * è·å–ä¼˜å…ˆäºTUXEDOç³»ç»Ÿåº“ä¹‹å‰è¿æ¥çš„æ–‡ä»¶ååˆ—è¡¨
 	 */
 	bool GetFirstFiles(std::string& firstfiles);
 
 	/**
 	 * [-l lastfiles]
-	 * »ñÈ¡ÒªÔÚTUXEDOÏµÍ³¿âÖ®ºóÁ¬½ÓµÄÎÄ¼şÃû
+	 * è·å–è¦åœ¨TUXEDOç³»ç»Ÿåº“ä¹‹åè¿æ¥çš„æ–‡ä»¶å
 	 */
 	bool GetLastFiles(std::string& lastfiles);
 
@@ -86,3 +86,7 @@ private:
 };
 
 #endif // end of TUX_BUILDSERVER_CMDLINE_H__
+
+
+// hello for owner file feature
+
