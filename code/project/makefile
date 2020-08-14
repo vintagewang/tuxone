@@ -31,6 +31,8 @@ TARGETS_DIR  = \
 		$(TOPDIR)/src/mkfldhdr32 \
 
 all::
+	@-mkdir $(TOPDIR)/bin
+	@-mkdir $(TOPDIR)/lib
 	@cd $(TOPDIR)/ext/lwpr/project; $(MAKE)
 	@-mkdir $(TOPDIR)/include/lwpr
 	@-cp $(TOPDIR)/ext/lwpr/src/*.h $(TOPDIR)/include/lwpr/

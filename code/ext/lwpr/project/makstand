@@ -5,6 +5,12 @@
 #           LWPR_ENV_RELEASE
 #           LWPR_ENV_ARCH=32/64
 #
+
+
+LWPR_ENV_ARCH:=$(shell getconf LONG_BIT)
+
+
+
 CC              = g++
 LD              = g++
 AR              = ar rvuc
